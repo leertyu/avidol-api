@@ -26,9 +26,6 @@ WORKDIR /app
 # คัดลอกเฉพาะตัวไฟล์โปรแกรม (Binary) ที่ build เสร็จแล้วมาจาก Stage แรก
 COPY --from=builder /app/target/release/avidol-api .
 
-# คัดลอกไฟล์ .env (ถ้าต้องการใช้ใน container)
-COPY .env .
-
 # ระบุพอร์ตที่ API รัน
 EXPOSE 8080
 
