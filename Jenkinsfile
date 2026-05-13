@@ -23,10 +23,10 @@ pipeline {
             steps {
                 script {
                     sh "ls -R"
-                    sh "docker build -t avidol-app ."
+                    sh "docker build -t avidol-api ."
                     
-                    sh "docker rm -f avidol-app || true"
-                    sh "docker run -d -p 3000:3000 --name avidol-app avidol-app"
+                    sh "docker rm -f avidol-api || true"
+                    sh "docker run -d -p 3001:3001 --name avidol-api avidol-api"
                 }
             }
         }       
